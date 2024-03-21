@@ -17,5 +17,5 @@ The ultimate goal, if this works, would be to find the central point of the circ
 
 **Spinal length 3D slicer:**
 
-To run this code you need to copy it on the 3D slicer interpreter. 
+To run this code you need to copy it on the Python interpreter of 3D slicer. 
 The aim of this code is to measure the spinal lenght from manually placed landmarks in each slice with 3D slicer tool.
