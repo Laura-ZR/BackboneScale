@@ -20,14 +20,14 @@ BackboneScale is a software tool designed to accurately measure the spinal lengt
 
 ## Installation
 1. Download the code; there are multiple options to do so:
-- Download a zip file from the menu on GitHub `Download zip`
-- Clone the repository 
+  - Download a zip file from the menu on GitHub `Download zip`
+  - Clone the repository 
 ```
 git clone https://github.com/Laura-ZR/BackboneScale.git  
 
 cd BackboneScale/
 ```
-2. Install the prerequirements from the `requirements.txt` file:
+2. Install the pre-requirements from the `requirements.txt` file:
 ```
 pip install -r requirements.txt
 ```
@@ -36,10 +36,10 @@ pip install -r requirements.txt
 1. Execute the code to open the software interface.
 2. Click on the `Select Folder` button to identify the folder in which your DICOM files are stored. 
 3. Place the two landmarks for the anterior and posterior lengths in one slice:
-- Anterior landmark (red): click with left button of the mouse 
-- Posterior landmark (green): click with right button of the mouse
+  - Anterior landmark (red): click with left button of the mouse 
+  - Posterior landmark (green): click with right button of the mouse
 4. Select the seed point for the watershed segmentation
-- Central landmark (not displayed): click with the scroll wheel of the mouse
+  - Central landmark (not displayed): click with the scroll wheel of the mouse
 4. Repeat this process in all slices. Travel through them by clicking `Next>>` and `<<Prev` buttons.
 5. To obtain the spinal lengths, click on the `Calculate Manual Distances`.
 
