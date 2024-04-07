@@ -1,8 +1,4 @@
 
-<div align="center" id="madewithlua">
-    <logo2.png width="110", height="100">
-</div>
-
 # BackboneScale
 
 BackboneScale is a software tool designed to accurately measure the spinal length from medical imaging data, specifically DICOM files. Developed with a focus on ease of use and precision, BackboneScale is intended to aid in the diagnosis and treatment of scoliosis. As such, the software outputs three different lengths: anterior, posterior, and central.
