@@ -7,7 +7,7 @@ BackboneScale is a software tool designed to accurately measure the spinal lengt
 1. Key features
 2. Installation
 3. Usage
-4. Limitations and guidance
+4. Limitations
 5. Contributors
 
 ## Key features
@@ -20,8 +20,8 @@ BackboneScale is a software tool designed to accurately measure the spinal lengt
 
 ## Installation
 1. Download the code; there are multiple options to do so:
-  - Download a zip file from the menu on GitHub `Download zip`
-  - Clone the repository 
+> - Download a zip file from the menu on GitHub `Download zip`
+> - Clone the repository 
 ```
 git clone https://github.com/Laura-ZR/BackboneScale.git  
 
@@ -36,12 +36,19 @@ pip install -r requirements.txt
 1. Execute the code to open the software interface.
 2. Click on the `Select Folder` button to identify the folder in which your DICOM files are stored. 
 3. Place the two landmarks for the anterior and posterior lengths in one slice:
-  - Anterior landmark (red): click with left button of the mouse 
-  - Posterior landmark (green): click with right button of the mouse
+> - Anterior landmark (red): click with left button of the mouse 
+> - Posterior landmark (green): click with right button of the mouse
 4. Select the seed point for the watershed segmentation
-  - Central landmark (not displayed): click with the scroll wheel of the mouse
+> - Central landmark (not displayed): click with the scroll wheel of the mouse
 5. Repeat this process in all slices. Travel through them by clicking `Next>>` and `<<Prev` buttons.
 6. To obtain the spinal lengths, click on the `Calculate Manual Distances`.
+
+## Limitations and guidance
+- The interactive interface requires a mouse, it is not fully functional with only the touchpad.
+- The watershed segmentation greatly relies on the seed point. Thus, several refinements have been added to prevent its failure:
+> - If the segmentation did not provide any segments, a "No voxels segmented. Click again to retry." message will pop up. The user is prompt to select another seed point.
+> - If the watershed algorithm failed during execution, a "Failed to segment region" message will notify the user.
+- If the number of landmarks placed for the anterior and posterior lengths is unequal, the "Unequal number of points on left and right sides" message will notify the user.
 
 ## Credits
 BackboneScale starts as a group project for Team Challenge course, as an initiative to help surgeons in the scoliosis treatment. Within this context, group 4 stands as authors of such tool:
