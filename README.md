@@ -40,8 +40,8 @@ pip install -r requirements.txt
   - Posterior landmark (green): click with right button of the mouse
 4. Select the seed point for the watershed segmentation
   - Central landmark (not displayed): click with the scroll wheel of the mouse
-4. Repeat this process in all slices. Travel through them by clicking `Next>>` and `<<Prev` buttons.
-5. To obtain the spinal lengths, click on the `Calculate Manual Distances`.
+5. Repeat this process in all slices. Travel through them by clicking `Next>>` and `<<Prev` buttons.
+6. To obtain the spinal lengths, click on the `Calculate Manual Distances`.
 
 ## Credits
 BackboneScale starts as a group project for Team Challenge course, as an initiative to help surgeons in the scoliosis treatment. Within this context, group 4 stands as authors of such tool:
