@@ -198,15 +198,34 @@ class BackboneScale:
             self.canvas.draw()
 
     def threshold(self, image):
+        """
+        Returns a thresholded image array based on the otsu threshold value.
+
+        Parameters:
+        image (np.ndarray). Image array to be thresholded.
+        """
         threshold_value = threshold_otsu(image)
         return image > threshold_value
 
     def window_threshold(self, image, factor=100):
+        """
+        Returns a windowed image array based on the selected intensity +- a factor.
+
+        Parameters:
+        image (np.ndarray). Image array to be windowed.
+        factor (int) (optional, default = 100). Size of the window.
+        """
         threshold_down = image[self.seed_point[0]][self.seed_point[1]] - factor
         threshold_up = image[self.seed_point[0]][self.seed_point[1]] + factor
         return np.logical_and(image > threshold_down, image < threshold_up)
 
     def region_growing(self, image):
+        """
+        Returns a watershed segmentation array based on the image and selected window point.
+
+        Parameters:
+        image (np.ndarray). Image array to be segmented.
+        """
         factor = 100
         binary_image = self.window_threshold(image)
         markers = np.zeros_like(binary_image, dtype=bool)
