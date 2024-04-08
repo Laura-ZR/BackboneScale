@@ -60,7 +60,7 @@ Optional
 - If the number of landmarks placed for the anterior and posterior lengths is unequal, the "Unequal number of points on left and right sides" message will notify the user.
 
 ## Credits
-BackboneScale starts as a group project for Team Challenge course, as an initiative to help surgeons in the scoliosis treatment. Within this context, group 4 stands as authors of such tool:
+BackboneScale starts as a group project for Team Challenge course, as an initiative to help surgeons in the scoliosis treatment. Within this context, group 3 stands as authors of such tool:
 - Koen Vat
 - Jelle van der Pas
 - Laura Zavala Rucio
