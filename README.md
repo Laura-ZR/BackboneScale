@@ -1,7 +1,7 @@
 
 # BackboneScale
 
-BackboneScale is a software tool designed to accurately measure the spinal length from medical imaging data, specifically DICOM files. Developed with a focus on ease of use and precision, BackboneScale is intended to aid in the diagnosis and treatment of scoliosis. As such, the software outputs three different lengths: anterior, posterior, and central.
+BackboneScale is a software tool designed to accurately measure the spinal length from medical imaging data, specifically DICOM files. Developed with a focus on ease of use and precision, BackboneScale is intended to aid in the diagnosis and treatment of scoliosis. As such, the software outputs three different spinal lengths: anterior, posterior, and central. 
 
 ## Table of contents
 1. Key features
@@ -41,9 +41,18 @@ pip install -r requirements.txt
 4. Select the seed point for the watershed segmentation
 > - Central landmark (not displayed): click with the scroll wheel of the mouse
 5. Repeat this process in all slices. Travel through them by clicking `Next>>` and `<<Prev` buttons.
-6. To obtain the spinal lengths, click on the `Calculate Manual Distances`.
+6. To obtain the spinal lengths, click on the `Calculate Manual Distances`. 
+The spinal length will be calculated in three different ways:
+> - From the anterior landmarks
+> - From the posterior landmarks
+> - From the center between the anterior and posterior landmarks
+> - From the calculated centers of the segmentations
+Optional
+7. Click on `Save Segmentations` to store the semiautomatic vertebra segmentations.
+8. Click on `Plot 3D Points` to generate an interactive 3D plot of the centers from the segmentations.
 
 ## Limitations and guidance
+- The selected folder should contain DICOM images of just one individual. A different subject can be chosen by choosing a different folder.
 - The interactive interface requires a mouse, it is not fully functional with only the touchpad.
 - The watershed segmentation greatly relies on the seed point. Thus, several refinements have been added to prevent its failure:
 > - If the segmentation did not provide any segments, a "No voxels segmented. Click again to retry." message will pop up. The user is prompt to select another seed point.
